@@ -36,10 +36,10 @@ for tc in range(1, t+1):
 
     print(f'#{tc}')
     for k in range(N):
-        for l in range(N):
-            print(arr[k][l], end=' ')
-        print()
-
+        # for l in range(N):
+        #     print(arr[k][l], end=' ')
+        # print()
+        print(*k)
 
 
 
