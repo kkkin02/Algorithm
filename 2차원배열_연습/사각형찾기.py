@@ -25,4 +25,4 @@ for tc in range(1, t+1):
             if rectangle[r] * rectangle.count(rectangle[r]) > max_rec:
                 max_rec = rectangle[r] * rectangle.count(rectangle[r])
 
-    print(f'#{tc} {max_rec}')
+    print('#{} {}'.format(tc, max_rec))

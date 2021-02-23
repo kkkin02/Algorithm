@@ -31,4 +31,4 @@ for tc in range(1, t+1):
                         if cnt_a > max_length:
                             max_length = cnt_a
 
-    print(f'#{tc} {max_length}')
+    print('#{tc} {max_length}')
