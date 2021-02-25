@@ -9,21 +9,17 @@ for tc in range(1, t + 1):
         change.append(list(map(int, input().split())))
 
     # 모든 숫자가 0인 박스 n개 생성
-    result = list('0'*n)
+    result = list('0'*(n+1))
 
     # i가 1일 때부터 q번만큼 진행
     for i in range(1, q+1):
         # i=1에 해당하는 리스트값의 범위만큼
         for j in range(change[i-1][0], change[i-1][1]+1):
             # 주어진 인덱스의 값을 i로 변환
-            result[j-1] = i
-
+            result[j] = i
 
     print(f'#{tc}', end=' ')
-    for r in result:
+    for r in result[1:]:
         print(r, end=' ')
 
     print()
-
-
-
