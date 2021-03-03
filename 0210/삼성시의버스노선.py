@@ -11,14 +11,14 @@ for tc in range(1, t + 1):
     for count in range(p):
         b_stop.append(int(input()))
 
-    bus_stop = [0] * 5000
+    bus_stop = [0] * 5001
     for i in range(n):
         for j in range(b_range[i][0], b_range[i][1]+1):
-            bus_stop[j-1] += 1
+            bus_stop[j] += 1
 
     print(f"#{tc}", end=" ")
     for k in b_stop:
-        print(f'{bus_stop[k-1]}', end=" ")
+        print(f'{bus_stop[k]}', end=" ")
     print()
 
 

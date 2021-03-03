@@ -6,13 +6,13 @@ def isPossible(n, m, k, time):
         for j in range(i, i+m+1):
             fish[j] += fish[i] + k
 
-            for t in time:\\\
-                for l in range(t, max(time)):
-                    fish[l] -= 1
-                    if fish[l] < 0:
-                        return 'Impossible'
-                    else:
-                        continue
+    for t in time:
+        for l in range(t, max(time)):
+            fish[l] -= 1
+            if fish[l] < 0:
+                return 'Impossible'
+            else:
+                continue
 
     return 'Possible'
 
@@ -21,7 +21,6 @@ t = int(input())
 for tc in range(1, t+1):
     n, m, k = map(int, input().split())
     time = list(map(int, input().split()))
-    timel.sort()
 
     print(f'#{tc} {isPossible(n, m, k, time)}')
 

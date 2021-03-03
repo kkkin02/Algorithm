@@ -16,19 +16,19 @@ for tc in range(1, t+1):
                         cnt_a += 1
                     else:
                         break
-                    #cnt_a가 1이면 cnt_a가 폭, cnt_b가 길이
-                    if cnt_a == 1:
-                        cnt_b = 0
-                        for l in range(j, m):
-                            if arr[i][l] == 1:
-                                cnt_b += 1
-                            else:
-                                break
-                        if cnt_b > max_length:
-                            max_length = cnt_b
-                    #cnt_a가 1보다 크면 cnt_a가 길이, cnt_b가 폭
-                    elif cnt_a > 1:
-                        if cnt_a > max_length:
-                            max_length = cnt_a
+                #cnt_a가 1이면 cnt_a가 폭, cnt_b가 길이
+                if cnt_a == 1:
+                    cnt_b = 0
+                    for l in range(j, m):
+                        if arr[i][l] == 1:
+                            cnt_b += 1
+                        else:
+                            break
+                    if cnt_b > max_length:
+                        max_length = cnt_b
+                #cnt_a가 1보다 크면 cnt_a가 길이, cnt_b가 폭
+                elif cnt_a > 1:
+                    if cnt_a > max_length:
+                        max_length = cnt_a
 
-    print('#{tc} {max_length}')
+    print(f'#{tc} {max_length}')
